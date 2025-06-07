@@ -82,6 +82,58 @@
     background-color: #E62B1E;
 }
 
+.speakers-section {
+    background-color: white;
+    padding: 5rem 2rem;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.section-title {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.speaker-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.speaker-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.speaker-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.speaker-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.speaker-title {
+    font-size: 1rem;
+    color: #666666;
+    margin-top: 0.5rem;
+}
+
+.speaker-btn {
+    margin-top: 8rem;
+}
 
 @media (max-width: 1200px) {
     .hero-text h1 {
@@ -98,6 +150,14 @@
 
     .hero-date p {
         font-size: 3rem;
+    }
+
+    .speaker-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .speaker-btn {
+        margin-top: 4rem;
     }
 }
 
@@ -116,6 +176,22 @@
 
     .hero-date p {
         font-size: 2rem;
+    }
+
+    .speaker-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .speaker-name {
+        font-size: 1.25rem;
+    }
+
+    .speaker-title {
+        font-size: 0.95rem;
     }
 }
   
