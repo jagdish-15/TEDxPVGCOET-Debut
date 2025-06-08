@@ -67,11 +67,36 @@
 
 .button {
     padding: 1rem;
-    border-radius: 2rem;
+    border-radius: 0.5rem;
     border: none;
     color: white;
     cursor: pointer;
     font-size: 1.25rem;
+    z-index: 0;
+    position: relative;
+    overflow: hidden; 
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+    z-index: 1;
+  }
+  
+.button:hover::after {
+    opacity: 0.1;
+}
+
+.button span {
+    position: relative;
+    z-index: 2;
 }
 
 .color-ted-red {
@@ -80,6 +105,54 @@
   
 .bg-ted-red {
     background-color: #E62B1E;
+}
+
+.mailing-list {
+    background-color: white;
+    padding: 4rem 1.25rem 1rem 4rem;
+    min-height: 60vh;
+}
+  
+.mailing-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: start;
+    gap: 40px;
+}
+
+.mailing-text h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #333333;
+}
+
+.mailing-text p {
+    font-size: 1.5rem;
+    color: #333333;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: start;
+    padding-left: 4rem;
+}
+
+.subscribe-form input {
+    padding: 0.75rem 1rem;
+    font-size: 1.25rem;
+    border: none;
+    border-bottom: 1px solid #333333;
+    width: 80%;
+    color: black;
+}
+
+.subscribe-form input:focus {
+    border-bottom: 1.5px solid #333333;
+    border: 0.25rem;
 }
 
 .speakers-section {
@@ -234,6 +307,23 @@
     .speaker-btn {
         margin-top: 4rem;
     }
+
+    .mailing-content {
+        grid-template-columns: 2fr 3fr;
+        text-align: center;
+    }
+    
+    .mailing-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .mailing-text p {
+        font-size: 1.25rem;
+    }
+
+    .subscribe-form input {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 720px) {
@@ -267,6 +357,41 @@
 
     .speaker-title {
         font-size: 0.95rem;
+    }
+
+    .mailing-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .mailing-text h2 {
+        font-size: 2rem;
+    }
+
+    .mailing-text p {
+        font-size: 1rem;
+    }
+
+    .subscribe-form input {
+        font-size: 0.75rem;
+    }
+    
+    .subscribe-form {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .subscribe-form {
+        padding-left: 0px;
+    }
+
+    .subscribe-form {
+        align-items: center;
+        width: 100%;
+    }
+
+    .mailing-list {
+        padding: 2rem 1rem;
     }
 }
   
