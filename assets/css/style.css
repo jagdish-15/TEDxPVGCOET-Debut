@@ -208,13 +208,48 @@
     margin-top: 8rem;
 }
 
+.learn-more-section {
+    background: linear-gradient(to bottom, #111 0%, #000 100%);
+    padding: 4rem 1.25rem 2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.learn-more-content {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.learn-more-btn {
+    align-self: center;
+}
+
+.learn-more-h1 {
+    align-self: center;
+    font-size: 3rem;
+}
+
+.learn-more-video video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.5;
+    box-shadow:
+        0 0 10px rgba(255, 0, 0, 0.25),
+        0 0 20px rgba(255, 255, 255, 0.06);
+}  
+
 .footer {
     background-color: white;
     padding: 4rem 1.25rem 2rem 1.25rem;
     color: #333333;
     width: 100%;
     margin: 0 auto;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center;
 }
 
@@ -283,6 +318,15 @@
     opacity: 1;
 }
 
+@media (min-width: 721px) {
+    .learn-more-video video {
+        max-width: 75%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
 @media (max-width: 1200px) {
     .hero-text h1 {
       font-size: 6rem;
@@ -313,7 +357,8 @@
         text-align: center;
     }
     
-    .mailing-text h2 {
+    .mailing-text h2,
+    .learn-more-h1 {
         font-size: 2.5rem;
     }
 
@@ -364,7 +409,8 @@
         text-align: center;
     }
 
-    .mailing-text h2 {
+    .mailing-text h2, 
+    .learn-more-h1 {
         font-size: 2rem;
     }
 
@@ -390,7 +436,9 @@
         width: 100%;
     }
 
-    .mailing-list, .speakers-section, .footer {
+    .mailing-list, 
+    .speakers-section, 
+    .footer {
         padding: 2rem 1rem;
     }
 }
